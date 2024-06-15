@@ -1,10 +1,10 @@
-name: Format
+name: Test
 
 on:
   workflow_call:
 
 jobs:
-  format:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,5 +13,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Format
-        run: npm run format
+      - name: Test
+        run: npm run test

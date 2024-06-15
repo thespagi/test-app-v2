@@ -3,9 +3,15 @@ on:
   push:
     branches:
       - main
+      - dev
 
 jobs:
   format:
     name: Format
     uses: ./.github/workflows/format.yml
+    secrets: inherit
+
+  test:
+    name: Test
+    uses: ./.github/workflows/test.yml
     secrets: inherit
