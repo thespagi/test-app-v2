@@ -19,7 +19,8 @@
   },
   "javascript": {
     "formatter": {
-      "trailingCommas": "all"
+      "trailingCommas": "all",
+      "quoteStyle": "double"
     }
   }
 }
