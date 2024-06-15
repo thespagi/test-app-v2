@@ -10,3 +10,8 @@ jobs:
     name: Format
     uses: ./.github/workflows/format.yml
     secrets: inherit
+
+  test:
+    name: Test
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
