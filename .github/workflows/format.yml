@@ -1,14 +1,29 @@
 name: Format
 
 on:
-  workflow_call:
-
+  push:
+    branches:
+      - release   
+      - dev
+      - feature/*
+  pull_request:
+    branches:
+      - main
+      - release
+      - dev
+  
 jobs:
   format:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+    -   name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
