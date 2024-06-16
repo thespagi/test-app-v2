@@ -20,4 +20,3 @@ jobs:
     name: Containerize
     uses: ./.github/workflows/containerize.yml
     secrets: inherit
-    needs: format, test
