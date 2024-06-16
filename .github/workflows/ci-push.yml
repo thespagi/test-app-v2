@@ -15,3 +15,9 @@ jobs:
     name: Test
     uses: ./.github/workflows/test.yml
     secrets: inherit
+  
+  containerize:
+    name: Containerize
+    uses: ./.github/workflows/containerize.yml
+    secrets: inherit
+    needs: format, test
