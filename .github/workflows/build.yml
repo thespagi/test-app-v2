@@ -1,16 +1,7 @@
 name: Build
 
 on:
-  push:
-    branches:
-      - release   
-      - dev
-      - feature/*
-  pull_request:
-    branches:
-      - main
-      - release
-      - dev
+  workflow_call:
   
 jobs:
   build:

@@ -1,16 +1,7 @@
 name: Format
 
 on:
-  push:
-    branches:
-      - release   
-      - dev
-      - feature/*
-  pull_request:
-    branches:
-      - main
-      - release
-      - dev
+  workflow_call:
   
 jobs:
   format:
