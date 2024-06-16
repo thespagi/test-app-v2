@@ -4,20 +4,14 @@ on:
   workflow_call:
 
 jobs:
-  build:
+  containerize:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build the Docker image
+      - name: Build the Docker container
         run: docker-compose build --no-cache
 
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Test the Docker image
+      - name: Start the Docker container
         run: docker-compose up -d
